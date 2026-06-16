@@ -1,0 +1,31 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "All-Rights-Reserved"
+
+[[mods]]
+modId = "lidmemory"
+version = "${version}"
+displayName = "LIDmemory"
+authors = "l1388"
+description = "LID×ÔÖÆmod-by llroxy"
+
+[[dependencies.lidmemory]]
+modId = "forge"
+mandatory = true
+versionRange = "[${forge_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.lidmemory]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[${minecraft_version},${minecraft_version}]"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.lidmemory]]
+modId = "curios"
+mandatory = true
+versionRange = "[5.0.0,)"
+ordering = "AFTER"
+side = "BOTH"

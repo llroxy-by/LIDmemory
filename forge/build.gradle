@@ -1,0 +1,66 @@
+plugins {
+    id "net.minecraftforge.gradle" version "[6.0,6.2)"
+}
+
+base {
+    archivesName = "${archives_base_name}-forge"
+}
+
+minecraft {
+    mappings channel: "official", version: minecraft_version
+
+    runs {
+        client {
+            workingDirectory project.file("run")
+            property "forge.logging.markers", "REGISTRIES"
+            mods {
+                lidmemory {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file("run")
+            property "forge.logging.markers", "REGISTRIES"
+            mods {
+                lidmemory {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+repositories {
+    maven { url = "https://maven.theillusivec4.top/" }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir "../common/src/main/java"
+        }
+        resources {
+            srcDir "../common/src/main/resources"
+        }
+    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "minecraft_version", minecraft_version
+    inputs.property "forge_version", forge_version
+
+    filesMatching("META-INF/mods.toml") {
+        expand "version": project.version,
+            "minecraft_version": minecraft_version,
+            "forge_version": forge_version
+    }
+}

@@ -1,0 +1,43 @@
+plugins {
+    id "fabric-loom" version "1.6-SNAPSHOT"
+}
+
+base {
+    archivesName = "${archives_base_name}-fabric"
+}
+
+loom {
+    splitEnvironmentSourceSets()
+}
+
+repositories {
+    maven { url = "https://maven.ladysnake.org/releases" }
+    maven { url = "https://api.modrinth.com/maven" }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir "../common/src/main/java"
+        }
+        resources {
+            srcDir "../common/src/main/resources"
+        }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+    modImplementation "maven.modrinth:trinkets:${trinkets_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}

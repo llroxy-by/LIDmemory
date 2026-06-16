@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lidmemory:block/relic_workbench"
+    }
+  }
+}
