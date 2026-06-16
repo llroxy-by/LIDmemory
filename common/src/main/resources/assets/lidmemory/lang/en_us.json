@@ -7,5 +7,7 @@
     "block.lidmemory.relic_workbench":  "Relic Workbench",
     "container.lidmemory.relic_workbench":  "Relic Workbench",
     "item.lidmemory.garry_relic":  "Garry\u0027s Relic",
-    "tooltip.lidmemory.garry_effect":  "Garry\u0027s Blessing: Continue eating when full, each hunger point converts to 50 XP"
+    "tooltip.lidmemory.garry_effect":  "Garry\u0027s Blessing: Continue eating when full, each hunger point converts to 50 XP",
+    "block.lidmemory.mango_plant":  "Mango",
+    "item.lidmemory.mango_plant":  "Mango"
 }

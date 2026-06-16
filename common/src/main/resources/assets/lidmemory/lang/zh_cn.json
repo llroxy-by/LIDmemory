@@ -7,5 +7,7 @@
     "block.lidmemory.relic_workbench":  "遗物工作台",
     "container.lidmemory.relic_workbench":  "遗物工作台",
     "item.lidmemory.garry_relic":  "Garry的遗物",
-    "tooltip.lidmemory.garry_effect":  "Garry的恩赐：饱食后可继续进食，每点饱食度转化为50经验值"
+    "tooltip.lidmemory.garry_effect":  "Garry的恩赐：饱食后可继续进食，每点饱食度转化为50经验值",
+    "block.lidmemory.mango_plant":  "芒果",
+    "item.lidmemory.mango_plant":  "芒果"
 }

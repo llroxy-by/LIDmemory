@@ -1,6 +1,7 @@
 package com.lidmemory.forge;
 
 import com.lidmemory.LIDMemory;
+import com.lidmemory.block.MangoPlantBlock;
 import com.lidmemory.block.RelicWorkbenchBlock;
 import com.lidmemory.menu.RelicWorkbenchMenu;
 import com.lidmemory.menu.RelicWorkbenchMenuTypes;
@@ -37,6 +38,11 @@ public final class LIDMemoryForge {
     public static final RegistryObject<Item> GARRY_RELIC = ITEMS.register(
         LIDMemory.GARRY_RELIC_ID, () -> new ForgeRelicItem(RelicType.GARRY, new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
 
+    public static final RegistryObject<Block> MANGO_PLANT_BLOCK = BLOCKS.register(
+        LIDMemory.MANGO_PLANT_ID, MangoPlantBlock::new);
+    public static final RegistryObject<Item> MANGO_PLANT_ITEM = ITEMS.register(
+        LIDMemory.MANGO_PLANT_ID, () -> new BlockItem(MANGO_PLANT_BLOCK.get(), new Item.Properties()));
+
     public static final RegistryObject<Block> RELIC_WORKBENCH_BLOCK = BLOCKS.register(
         LIDMemory.RELIC_WORKBENCH_ID, RelicWorkbenchBlock::new);
     public static final RegistryObject<Item> RELIC_WORKBENCH_ITEM = ITEMS.register(
@@ -62,6 +68,9 @@ public final class LIDMemoryForge {
             event.accept(AX_RELIC);
             event.accept(GARRY_RELIC);
             event.accept(RELIC_WORKBENCH_ITEM);
+        }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(MANGO_PLANT_ITEM);
         }
     }
 }
