@@ -1,9 +1,11 @@
 ﻿{
-  "item.lidmemory.llroxy_relic": "llroxy's Relic",
-  "item.lidmemory.iegg_cute_relic": "IEggCute's Relic",
-  "item.lidmemory.mango_relic": "Mango's Relic",
-  "item.lidmemory.ax_relic": "AX's Relic",
-  "item.lidmemory.relic_workbench": "Relic Workbench",
-  "block.lidmemory.relic_workbench": "Relic Workbench",
-  "container.lidmemory.relic_workbench": "Relic Workbench"
+    "item.lidmemory.llroxy_relic":  "llroxy\u0027s Relic",
+    "item.lidmemory.iegg_cute_relic":  "IEggCute\u0027s Relic",
+    "item.lidmemory.mango_relic":  "Mango\u0027s Relic",
+    "item.lidmemory.ax_relic":  "AX\u0027s Relic",
+    "item.lidmemory.relic_workbench":  "Relic Workbench",
+    "block.lidmemory.relic_workbench":  "Relic Workbench",
+    "container.lidmemory.relic_workbench":  "Relic Workbench",
+    "item.lidmemory.garry_relic":  "Garry\u0027s Relic",
+    "tooltip.lidmemory.garry_effect":  "Garry\u0027s Blessing: Continue eating when full, each hunger point converts to 50 XP"
 }

@@ -18,6 +18,7 @@ Minecraft 1.20.1 遗物模组，同时支持 Fabric 和 Forge。
 | **IEggCute的遗物** | 水下呼吸 | Trinkets: 项链 / Curios: 护符 |
 | **Mango的遗物** | 抗火 | Trinkets: 项链 / Curios: 护符 |
 | **AX的遗物** | 允许飞行 | Trinkets: 项链 / Curios: 护符 |
+| **Garry的遗物** | Garry的恩赐：饱食后可继续进食，每点饱食度转化为50经验值 | Trinkets: 项链 / Curios: 护符 |
 
 ## 遗物工作台
 

@@ -5,6 +5,7 @@ import com.lidmemory.block.RelicWorkbenchBlock;
 import com.lidmemory.menu.RelicWorkbenchMenu;
 import com.lidmemory.menu.RelicWorkbenchMenuTypes;
 import com.lidmemory.relic.RelicType;
+import com.lidmemory.recipe.RelicWorkbenchRecipe;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -33,6 +34,8 @@ public final class LIDMemoryForge {
         LIDMemory.MANGO_RELIC_ID, () -> new ForgeRelicItem(RelicType.MANGO, new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> AX_RELIC = ITEMS.register(
         LIDMemory.AX_RELIC_ID, () -> new ForgeRelicItem(RelicType.AX, new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> GARRY_RELIC = ITEMS.register(
+        LIDMemory.GARRY_RELIC_ID, () -> new ForgeRelicItem(RelicType.GARRY, new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
 
     public static final RegistryObject<Block> RELIC_WORKBENCH_BLOCK = BLOCKS.register(
         LIDMemory.RELIC_WORKBENCH_ID, RelicWorkbenchBlock::new);
@@ -43,6 +46,7 @@ public final class LIDMemoryForge {
         "relic_workbench", () -> RelicWorkbenchMenuTypes.createMenuType());
 
     public LIDMemoryForge() {
+        RelicWorkbenchRecipe.initRecipes();
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         ITEMS.register(modBus);
         BLOCKS.register(modBus);
@@ -56,6 +60,7 @@ public final class LIDMemoryForge {
             event.accept(IEGG_CUTE_RELIC);
             event.accept(MANGO_RELIC);
             event.accept(AX_RELIC);
+            event.accept(GARRY_RELIC);
             event.accept(RELIC_WORKBENCH_ITEM);
         }
     }

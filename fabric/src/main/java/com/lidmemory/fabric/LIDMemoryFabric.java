@@ -5,6 +5,7 @@ import com.lidmemory.block.RelicWorkbenchBlock;
 import com.lidmemory.menu.RelicWorkbenchMenu;
 import com.lidmemory.menu.RelicWorkbenchMenuTypes;
 import com.lidmemory.relic.RelicType;
+import com.lidmemory.recipe.RelicWorkbenchRecipe;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
@@ -22,6 +23,7 @@ public final class LIDMemoryFabric implements ModInitializer {
     public static final Item IEGG_CUTE_RELIC = registerItem(LIDMemory.IEGG_CUTE_RELIC_ID, new FabricRelicItem(RelicType.IEGG_CUTE, new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
     public static final Item MANGO_RELIC = registerItem(LIDMemory.MANGO_RELIC_ID, new FabricRelicItem(RelicType.MANGO, new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
     public static final Item AX_RELIC = registerItem(LIDMemory.AX_RELIC_ID, new FabricRelicItem(RelicType.AX, new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final Item GARRY_RELIC = registerItem(LIDMemory.GARRY_RELIC_ID, new FabricRelicItem(RelicType.GARRY, new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
 
     public static final Block RELIC_WORKBENCH_BLOCK = Registry.register(
         BuiltInRegistries.BLOCK,
@@ -38,11 +40,13 @@ public final class LIDMemoryFabric implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        RelicWorkbenchRecipe.initRecipes();
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> {
             entries.accept(LLROXY_RELIC);
             entries.accept(IEGG_CUTE_RELIC);
             entries.accept(MANGO_RELIC);
             entries.accept(AX_RELIC);
+            entries.accept(GARRY_RELIC);
             entries.accept(RELIC_WORKBENCH_ITEM);
         });
     }
