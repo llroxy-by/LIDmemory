@@ -1,47 +1,49 @@
 # LIDmemory
 
-Minecraft 1.20.1 relic mod for Fabric and Forge.
+**LID自制mod-by llroxy**
 
-This repository builds two separate mod files:
-- Fabric jar: uses Fabric API and Trinkets.
-- Forge jar: uses Forge and Curios API.
+Minecraft 1.20.1 遗物模组，同时支持 Fabric 和 Forge。
 
-The shared relic behavior lives in `common`, while loader-specific registration and accessory API integration lives in `fabric` and `forge`.
+本仓库构建出两个独立的模组文件：
+- Fabric 版：基于 Fabric API + Trinkets
+- Forge 版：基于 Forge + Curios API
 
-## Current Relics
+共用逻辑放在 `common` 目录，各加载器的注册与饰品 API 对接分别放在 `fabric` 和 `forge` 目录。
 
-| Name | Effect | Equip Slot |
-|------|--------|------------|
-| **llroxy鐨勯仐鐗?* | 澶滆 (Night Vision) | Trinkets: Necklace / Curios: Charm |
-| **IEggCute鐨勯仐鐗?* | 姘翠笅鍛煎惛 (Water Breathing) | Trinkets: Necklace / Curios: Charm |
-| **Mango鐨勯仐鐗?* | 鎶楃伀 (Fire Resistance) | Trinkets: Necklace / Curios: Charm |
+## 当前遗物
 
-## Relic Workbench
+| 名称 | 效果 | 装备栏位 |
+|------|------|----------|
+| **llroxy的遗物** | 夜视 | Trinkets: 项链 / Curios: 护符 |
+| **IEggCute的遗物** | 水下呼吸 | Trinkets: 项链 / Curios: 护符 |
+| **Mango的遗物** | 抗火 | Trinkets: 项链 / Curios: 护符 |
+| **AX的遗物** | 允许飞行 | Trinkets: 项链 / Curios: 护符 |
 
-A custom crafting GUI with 4 input slots (2脳2 grid) for assembling relics.  
-Place materials in the slots and combine them to craft the relic items.
+## 遗物工作台
 
-## Build
+一个带有 5×5 输入格 + 1 个输出格的自定义合成 GUI。放入材料即可合成遗物。关闭界面时物品会返还到背包。
 
-Double-click `Build-Mod.bat`, or run from terminal:
+## 构建
+
+双击 `Build-Mod.bat`，或在终端中运行：
 
 ```powershell
 .\Build-Mod.ps1
 ```
 
-The outputs will be in:
-- `fabric\build\libs\lidmemory-fabric-0.1.0.jar`
-- `forge\build\libs\lidmemory-forge-0.1.0.jar`
+构建产物位于：
+- `fabric\build\libs\lidmemory-fabric-beta0.1.jar`
+- `forge\build\libs\lidmemory-forge-beta0.1.jar`
 
-### Dependencies
+### 依赖
 
-- **Fabric version**: Fabric API + Trinkets
-- **Forge version**: Curios API
+- **Fabric**：Fabric API + Trinkets
+- **Forge**：Curios API
 
-## Project Structure
+## 项目结构
 
 ```
-common/          - Shared relic effects, language files, models, textures
-fabric/          - Fabric loader registration, Trinkets integration, Fabric GUI classes
-forge/           - Forge loader registration, Curios integration, Forge GUI classes
+common/          - 共用遗物效果、语言文件、模型、纹理
+fabric/          - Fabric 加载器注册、Trinkets 集成、Fabric GUI
+forge/           - Forge 加载器注册、Curios 集成、Forge GUI
 ```
