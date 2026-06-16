@@ -1,0 +1,8 @@
+{
+  "feature": "lidmemory:mango_plant_simple",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
